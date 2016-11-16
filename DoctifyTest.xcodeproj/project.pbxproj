@@ -1,0 +1,545 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EDA7D63C1DDBEF600069F4EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA7D63B1DDBEF600069F4EC /* AppDelegate.swift */; };
+		EDA7D63E1DDBEF600069F4EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA7D63D1DDBEF600069F4EC /* ViewController.swift */; };
+		EDA7D6411DDBEF600069F4EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDA7D63F1DDBEF600069F4EC /* Main.storyboard */; };
+		EDA7D6441DDBEF600069F4EC /* DoctifyTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EDA7D6421DDBEF600069F4EC /* DoctifyTest.xcdatamodeld */; };
+		EDA7D6461DDBEF600069F4EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDA7D6451DDBEF600069F4EC /* Assets.xcassets */; };
+		EDA7D6491DDBEF600069F4EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDA7D6471DDBEF600069F4EC /* LaunchScreen.storyboard */; };
+		EDA7D6541DDBEF610069F4EC /* DoctifyTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA7D6531DDBEF610069F4EC /* DoctifyTestTests.swift */; };
+		EDA7D65F1DDBEF610069F4EC /* DoctifyTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA7D65E1DDBEF610069F4EC /* DoctifyTestUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EDA7D6501DDBEF610069F4EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDA7D6301DDBEF600069F4EC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDA7D6371DDBEF600069F4EC;
+			remoteInfo = DoctifyTest;
+		};
+		EDA7D65B1DDBEF610069F4EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDA7D6301DDBEF600069F4EC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDA7D6371DDBEF600069F4EC;
+			remoteInfo = DoctifyTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EDA7D6381DDBEF600069F4EC /* DoctifyTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoctifyTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDA7D63B1DDBEF600069F4EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EDA7D63D1DDBEF600069F4EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EDA7D6401DDBEF600069F4EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EDA7D6431DDBEF600069F4EC /* DoctifyTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DoctifyTest.xcdatamodel; sourceTree = "<group>"; };
+		EDA7D6451DDBEF600069F4EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EDA7D6481DDBEF600069F4EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EDA7D64A1DDBEF600069F4EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDA7D64F1DDBEF610069F4EC /* DoctifyTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoctifyTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDA7D6531DDBEF610069F4EC /* DoctifyTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctifyTestTests.swift; sourceTree = "<group>"; };
+		EDA7D6551DDBEF610069F4EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDA7D65A1DDBEF610069F4EC /* DoctifyTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoctifyTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDA7D65E1DDBEF610069F4EC /* DoctifyTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctifyTestUITests.swift; sourceTree = "<group>"; };
+		EDA7D6601DDBEF610069F4EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EDA7D6351DDBEF600069F4EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDA7D64C1DDBEF610069F4EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDA7D6571DDBEF610069F4EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EDA7D62F1DDBEF5F0069F4EC = {
+			isa = PBXGroup;
+			children = (
+				EDA7D63A1DDBEF600069F4EC /* DoctifyTest */,
+				EDA7D6521DDBEF610069F4EC /* DoctifyTestTests */,
+				EDA7D65D1DDBEF610069F4EC /* DoctifyTestUITests */,
+				EDA7D6391DDBEF600069F4EC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EDA7D6391DDBEF600069F4EC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EDA7D6381DDBEF600069F4EC /* DoctifyTest.app */,
+				EDA7D64F1DDBEF610069F4EC /* DoctifyTestTests.xctest */,
+				EDA7D65A1DDBEF610069F4EC /* DoctifyTestUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EDA7D63A1DDBEF600069F4EC /* DoctifyTest */ = {
+			isa = PBXGroup;
+			children = (
+				EDA7D63B1DDBEF600069F4EC /* AppDelegate.swift */,
+				EDA7D63D1DDBEF600069F4EC /* ViewController.swift */,
+				EDA7D63F1DDBEF600069F4EC /* Main.storyboard */,
+				EDA7D6451DDBEF600069F4EC /* Assets.xcassets */,
+				EDA7D6471DDBEF600069F4EC /* LaunchScreen.storyboard */,
+				EDA7D64A1DDBEF600069F4EC /* Info.plist */,
+				EDA7D6421DDBEF600069F4EC /* DoctifyTest.xcdatamodeld */,
+			);
+			path = DoctifyTest;
+			sourceTree = "<group>";
+		};
+		EDA7D6521DDBEF610069F4EC /* DoctifyTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				EDA7D6531DDBEF610069F4EC /* DoctifyTestTests.swift */,
+				EDA7D6551DDBEF610069F4EC /* Info.plist */,
+			);
+			path = DoctifyTestTests;
+			sourceTree = "<group>";
+		};
+		EDA7D65D1DDBEF610069F4EC /* DoctifyTestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EDA7D65E1DDBEF610069F4EC /* DoctifyTestUITests.swift */,
+				EDA7D6601DDBEF610069F4EC /* Info.plist */,
+			);
+			path = DoctifyTestUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EDA7D6371DDBEF600069F4EC /* DoctifyTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDA7D6631DDBEF610069F4EC /* Build configuration list for PBXNativeTarget "DoctifyTest" */;
+			buildPhases = (
+				EDA7D6341DDBEF600069F4EC /* Sources */,
+				EDA7D6351DDBEF600069F4EC /* Frameworks */,
+				EDA7D6361DDBEF600069F4EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DoctifyTest;
+			productName = DoctifyTest;
+			productReference = EDA7D6381DDBEF600069F4EC /* DoctifyTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EDA7D64E1DDBEF610069F4EC /* DoctifyTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDA7D6661DDBEF610069F4EC /* Build configuration list for PBXNativeTarget "DoctifyTestTests" */;
+			buildPhases = (
+				EDA7D64B1DDBEF610069F4EC /* Sources */,
+				EDA7D64C1DDBEF610069F4EC /* Frameworks */,
+				EDA7D64D1DDBEF610069F4EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EDA7D6511DDBEF610069F4EC /* PBXTargetDependency */,
+			);
+			name = DoctifyTestTests;
+			productName = DoctifyTestTests;
+			productReference = EDA7D64F1DDBEF610069F4EC /* DoctifyTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EDA7D6591DDBEF610069F4EC /* DoctifyTestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDA7D6691DDBEF610069F4EC /* Build configuration list for PBXNativeTarget "DoctifyTestUITests" */;
+			buildPhases = (
+				EDA7D6561DDBEF610069F4EC /* Sources */,
+				EDA7D6571DDBEF610069F4EC /* Frameworks */,
+				EDA7D6581DDBEF610069F4EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EDA7D65C1DDBEF610069F4EC /* PBXTargetDependency */,
+			);
+			name = DoctifyTestUITests;
+			productName = DoctifyTestUITests;
+			productReference = EDA7D65A1DDBEF610069F4EC /* DoctifyTestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EDA7D6301DDBEF600069F4EC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = galmarom;
+				TargetAttributes = {
+					EDA7D6371DDBEF600069F4EC = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+					EDA7D64E1DDBEF610069F4EC = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EDA7D6371DDBEF600069F4EC;
+					};
+					EDA7D6591DDBEF610069F4EC = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EDA7D6371DDBEF600069F4EC;
+					};
+				};
+			};
+			buildConfigurationList = EDA7D6331DDBEF600069F4EC /* Build configuration list for PBXProject "DoctifyTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EDA7D62F1DDBEF5F0069F4EC;
+			productRefGroup = EDA7D6391DDBEF600069F4EC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EDA7D6371DDBEF600069F4EC /* DoctifyTest */,
+				EDA7D64E1DDBEF610069F4EC /* DoctifyTestTests */,
+				EDA7D6591DDBEF610069F4EC /* DoctifyTestUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EDA7D6361DDBEF600069F4EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDA7D6491DDBEF600069F4EC /* LaunchScreen.storyboard in Resources */,
+				EDA7D6461DDBEF600069F4EC /* Assets.xcassets in Resources */,
+				EDA7D6411DDBEF600069F4EC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDA7D64D1DDBEF610069F4EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDA7D6581DDBEF610069F4EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EDA7D6341DDBEF600069F4EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDA7D63E1DDBEF600069F4EC /* ViewController.swift in Sources */,
+				EDA7D6441DDBEF600069F4EC /* DoctifyTest.xcdatamodeld in Sources */,
+				EDA7D63C1DDBEF600069F4EC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDA7D64B1DDBEF610069F4EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDA7D6541DDBEF610069F4EC /* DoctifyTestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDA7D6561DDBEF610069F4EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDA7D65F1DDBEF610069F4EC /* DoctifyTestUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EDA7D6511DDBEF610069F4EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EDA7D6371DDBEF600069F4EC /* DoctifyTest */;
+			targetProxy = EDA7D6501DDBEF610069F4EC /* PBXContainerItemProxy */;
+		};
+		EDA7D65C1DDBEF610069F4EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EDA7D6371DDBEF600069F4EC /* DoctifyTest */;
+			targetProxy = EDA7D65B1DDBEF610069F4EC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EDA7D63F1DDBEF600069F4EC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EDA7D6401DDBEF600069F4EC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EDA7D6471DDBEF600069F4EC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EDA7D6481DDBEF600069F4EC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EDA7D6611DDBEF610069F4EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EDA7D6621DDBEF610069F4EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EDA7D6641DDBEF610069F4EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DoctifyTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "GalMaroms-gmail.com.DoctifyTest";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		EDA7D6651DDBEF610069F4EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DoctifyTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "GalMaroms-gmail.com.DoctifyTest";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		EDA7D6671DDBEF610069F4EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DoctifyTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "GalMaroms-gmail.com.DoctifyTestTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DoctifyTest.app/DoctifyTest";
+			};
+			name = Debug;
+		};
+		EDA7D6681DDBEF610069F4EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DoctifyTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "GalMaroms-gmail.com.DoctifyTestTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DoctifyTest.app/DoctifyTest";
+			};
+			name = Release;
+		};
+		EDA7D66A1DDBEF610069F4EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = DoctifyTestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "GalMaroms-gmail.com.DoctifyTestUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = DoctifyTest;
+			};
+			name = Debug;
+		};
+		EDA7D66B1DDBEF610069F4EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = DoctifyTestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "GalMaroms-gmail.com.DoctifyTestUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = DoctifyTest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EDA7D6331DDBEF600069F4EC /* Build configuration list for PBXProject "DoctifyTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDA7D6611DDBEF610069F4EC /* Debug */,
+				EDA7D6621DDBEF610069F4EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDA7D6631DDBEF610069F4EC /* Build configuration list for PBXNativeTarget "DoctifyTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDA7D6641DDBEF610069F4EC /* Debug */,
+				EDA7D6651DDBEF610069F4EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EDA7D6661DDBEF610069F4EC /* Build configuration list for PBXNativeTarget "DoctifyTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDA7D6671DDBEF610069F4EC /* Debug */,
+				EDA7D6681DDBEF610069F4EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EDA7D6691DDBEF610069F4EC /* Build configuration list for PBXNativeTarget "DoctifyTestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDA7D66A1DDBEF610069F4EC /* Debug */,
+				EDA7D66B1DDBEF610069F4EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EDA7D6421DDBEF600069F4EC /* DoctifyTest.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EDA7D6431DDBEF600069F4EC /* DoctifyTest.xcdatamodel */,
+			);
+			currentVersion = EDA7D6431DDBEF600069F4EC /* DoctifyTest.xcdatamodel */;
+			path = DoctifyTest.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = EDA7D6301DDBEF600069F4EC /* Project object */;
+}
