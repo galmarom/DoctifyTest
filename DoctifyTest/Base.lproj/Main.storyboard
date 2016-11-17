@@ -1,26 +1,135 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gTx-42-rwh">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Specialties-->
+        <scene sceneID="s7M-Ek-610">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tableViewController title="Specialties" id="VbT-Or-3P8" customClass="SpecialtyViewController" customModule="DoctifyTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="82" sectionHeaderHeight="28" sectionFooterHeight="28" id="sxz-XZ-rM9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="specialityCell" textLabel="IV3-wG-RJz" imageView="mSp-1f-lQh" rowHeight="82" style="IBUITableViewCellStyleDefault" id="O6N-c9-yHT">
+                                <rect key="frame" x="0.0" y="28" width="375" height="82"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="O6N-c9-yHT" id="t2H-Lh-djd">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="81"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IV3-wG-RJz">
+                                            <rect key="frame" x="124" y="0.0" width="236" height="81"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="doctifyLogo.png" id="mSp-1f-lQh">
+                                            <rect key="frame" x="15" y="0.0" width="94" height="81"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="C4N-ls-ovO" kind="show" identifier="showSpeciality" id="bbL-03-og1"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="VbT-Or-3P8" id="xYL-7e-Et2"/>
+                            <outlet property="delegate" destination="VbT-Or-3P8" id="Lco-Xc-MwI"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Specialities" id="plu-s0-V2H"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gu9-Az-0ik" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-346" y="374"/>
+        </scene>
+        <!--Speciality Info Table View Controller-->
+        <scene sceneID="1kS-Kw-52m">
+            <objects>
+                <tableViewController id="C4N-ls-ovO" customClass="SpecialityInfoTableViewController" customModule="DoctifyTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="97" sectionHeaderHeight="28" sectionFooterHeight="28" id="0KL-QK-pk1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" red="0.73725491759999995" green="0.94117653369999998" blue="0.94117653369999998" alpha="1" colorSpace="deviceRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="specialityInfoCell" rowHeight="97" id="QnL-rM-r4a" customClass="SpecialityInfoCell" customModule="DoctifyTest" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="97"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QnL-rM-r4a" id="VBh-Kv-XCI">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="97"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DzR-wb-S3q">
+                                            <rect key="frame" x="8" y="8" width="359" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="feZ-zX-kOs">
+                                            <rect key="frame" x="8" y="36.5" width="359" height="52.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="DzR-wb-S3q" firstAttribute="trailing" secondItem="VBh-Kv-XCI" secondAttribute="trailingMargin" id="14z-Wx-HWK"/>
+                                        <constraint firstItem="feZ-zX-kOs" firstAttribute="leading" secondItem="VBh-Kv-XCI" secondAttribute="leadingMargin" id="IA5-P4-DDo"/>
+                                        <constraint firstItem="feZ-zX-kOs" firstAttribute="top" secondItem="DzR-wb-S3q" secondAttribute="bottom" constant="8" id="Pb3-y4-cvt"/>
+                                        <constraint firstItem="feZ-zX-kOs" firstAttribute="trailing" secondItem="VBh-Kv-XCI" secondAttribute="trailingMargin" id="abl-N9-dSe"/>
+                                        <constraint firstItem="feZ-zX-kOs" firstAttribute="bottom" secondItem="VBh-Kv-XCI" secondAttribute="bottomMargin" id="bWC-6K-A40"/>
+                                        <constraint firstItem="DzR-wb-S3q" firstAttribute="top" secondItem="VBh-Kv-XCI" secondAttribute="topMargin" id="hxe-g9-S8P"/>
+                                        <constraint firstItem="DzR-wb-S3q" firstAttribute="leading" secondItem="VBh-Kv-XCI" secondAttribute="leadingMargin" id="olZ-OT-UVi"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="feZ-zX-kOs" id="qIV-Fk-JQD"/>
+                                    <outlet property="titleLabel" destination="DzR-wb-S3q" id="UOF-QQ-Mrd"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="C4N-ls-ovO" id="uFb-Ry-PZK"/>
+                            <outlet property="delegate" destination="C4N-ls-ovO" id="a2f-l6-1lh"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="T4w-ZM-Xbm"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XYm-LY-2hY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="394" y="374"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZN2-LK-K1d">
+            <objects>
+                <navigationController id="gTx-42-rwh" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="B8k-11-waI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="VbT-Or-3P8" kind="relationship" relationship="rootViewController" id="937-gW-2m8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iHr-On-YuB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1060" y="374"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="doctifyLogo.png" width="121" height="104"/>
+    </resources>
+    <color key="tintColor" red="0.93783468008041382" green="0.84466069936752319" blue="0.78558206558227539" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
