@@ -12,7 +12,7 @@ import XCTest
 class NetworkTests: XCTestCase {
     
      var (urlExample,isJson) : (String,Bool) = {
-        return  ("\(NetworkHelper.sharedInstance.baseURL)/\(RateExchangeHelper.sharedInstance.exchangeRatesURL)",true)
+        return  ("\(NetworkHelper.sharedInstance.baseURL)/\(SpecialtyViewController.specialitysURL)",true)
     }()
 
 

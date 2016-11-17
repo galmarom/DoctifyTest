@@ -34,7 +34,7 @@ class SpecialtyInfo: NSObject {
         }
     }
     override var debugDescription: String{
-        return "ClothItem: id: \(specialityId), name: \(name), iconURL: \(iconURL)"
+        return "SpecialtyInfo: id: \(specialityId), name: \(name), iconURL: \(iconURL)"
     }
     
     /**

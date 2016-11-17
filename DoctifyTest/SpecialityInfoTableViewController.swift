@@ -16,6 +16,7 @@ class SpecialityInfoTableViewController: UITableViewController {
             specilaistDetailsURL = "/api/v2/keywords/\(specialityId!)"
         }
     }
+    //Functions as the DataSource. The title and value will be saved as truple. and will be present at the table accordingly
     var specialityInfoArray = [(title : String,value : String)]()
     
     //Constants
@@ -24,9 +25,12 @@ class SpecialityInfoTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Adjust the table to multpile sizes of content
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 140
-        self.getspecialitysFromUrl()
+        if(specialityId != nil){
+            self.getspecialitysFromUrl()
+        }
     }
 
     
@@ -58,6 +62,7 @@ class SpecialityInfoTableViewController: UITableViewController {
                 if itemsArray.count == 1 {
                     let specialityDictionary = itemsArray.first!
                     self.specialityInfoArray = [(title : String,value : String)]()
+                    //Checking if the value for the field to represent is valid and adding it to the DataSource "specialityInfoArray"
                     if let name = specialityDictionary["name"] as? String {
                         self.specialityInfoArray.append(("Name:",name))
                         self.title = name

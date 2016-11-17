@@ -11,7 +11,7 @@ import UIKit
 class SpecialtyViewController: UITableViewController {
 
     //Constants
-    let specialitysURL = "api/v2/keywords/specialty"
+    static let specialitysURL = "api/v2/keywords/specialty"
     let specialityCellId = "specialityCell"
     let imagesDirectoryName = "icons"
 
@@ -23,7 +23,7 @@ class SpecialtyViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.getspecialitysFromUrl()
+        self.getspecialitiessFromUrl()
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,10 +33,10 @@ class SpecialtyViewController: UITableViewController {
     
     
     //Sending a request to retrieve the item from the resource
-    func getspecialitysFromUrl(){
+    func getspecialitiessFromUrl(){
         self.animateActivityIndicator(start: true)
         weak var weakSelf = self
-        let sourceUrl = NetworkHelper.sharedInstance.baseURL + "/" + specialitysURL
+        let sourceUrl = NetworkHelper.sharedInstance.baseURL + "/" + SpecialtyViewController.specialitysURL
         NetworkHelper.sendRequest(url: sourceUrl, parameters: nil, withCompletionHandler: { data, response, error in
             guard error == nil else {
                 print("An error has occured : " + error!.localizedDescription)
@@ -44,7 +44,7 @@ class SpecialtyViewController: UITableViewController {
                 let alert = UIAlertController(title: "Error", message:error?.localizedDescription, preferredStyle: UIAlertControllerStyle.alert)
                 let OKAction = UIAlertAction(title: "OK", style:.cancel, handler: { action in
                     DispatchQueue.global(qos: DispatchQoS.QoSClass.userInitiated).asyncAfter(deadline: .now() + .seconds(5)){
-                        weakSelf?.getspecialitysFromUrl()
+                        weakSelf?.getspecialitiessFromUrl()
                     }
                 })
                 alert.addAction(OKAction)
@@ -58,6 +58,7 @@ class SpecialtyViewController: UITableViewController {
                 return
             }
             do {
+                //Parsing the json
                 let itemsArray = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! Array<Dictionary<String,AnyObject>>
                 if itemsArray.count != 0 {
                     self.specialityArray = itemsArray.flatMap{

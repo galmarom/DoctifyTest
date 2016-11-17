@@ -131,5 +131,5 @@
     <resources>
         <image name="doctifyLogo.png" width="121" height="104"/>
     </resources>
-    <color key="tintColor" red="0.93783468008041382" green="0.84466069936752319" blue="0.78558206558227539" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+    <color key="tintColor" red="0.2779708206653595" green="0.53227144479751587" blue="0.41637212038040161" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
