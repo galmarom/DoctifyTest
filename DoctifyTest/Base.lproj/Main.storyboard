@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gTx-42-rwh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="HT2-bb-nDY">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -39,7 +39,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="C4N-ls-ovO" kind="show" identifier="showSpeciality" id="bbL-03-og1"/>
+                                    <segue destination="rpD-Ow-EAq" kind="showDetail" identifier="showSpeciality" id="HHP-SU-WHF"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -52,7 +52,36 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gu9-Az-0ik" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-346" y="374"/>
+            <point key="canvasLocation" x="409" y="1146"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YIp-BI-osm">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KSJ-pP-j7C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="rpD-Ow-EAq" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DG8-Jh-WUV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="C4N-ls-ovO" kind="relationship" relationship="rootViewController" id="JYi-ka-wWh"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="374" y="1972"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="8SP-28-0AW">
+            <objects>
+                <splitViewController id="HT2-bb-nDY" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="rpD-Ow-EAq" kind="relationship" relationship="detailViewController" id="oAE-js-lQf"/>
+                        <segue destination="lfe-0a-qf1" kind="relationship" relationship="masterViewController" id="Ehq-W3-FcD"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K1f-t4-FuW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1279" y="1481"/>
         </scene>
         <!--Speciality Info Table View Controller-->
         <scene sceneID="1kS-Kw-52m">
@@ -109,27 +138,32 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XYm-LY-2hY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="394" y="374"/>
+            <point key="canvasLocation" x="1119" y="1971"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="ZN2-LK-K1d">
+        <scene sceneID="TPg-Me-AOX">
             <objects>
-                <navigationController id="gTx-42-rwh" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="B8k-11-waI">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lfe-0a-qf1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RMO-81-E9E">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="VbT-Or-3P8" kind="relationship" relationship="rootViewController" id="937-gW-2m8"/>
+                        <segue destination="VbT-Or-3P8" kind="relationship" relationship="rootViewController" id="ulH-Pv-qUY"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iHr-On-YuB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xzS-Lu-UrN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1060" y="374"/>
+            <point key="canvasLocation" x="-298" y="1146"/>
         </scene>
     </scenes>
     <resources>
         <image name="doctifyLogo.png" width="121" height="104"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="HHP-SU-WHF"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.2779708206653595" green="0.53227144479751587" blue="0.41637212038040161" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

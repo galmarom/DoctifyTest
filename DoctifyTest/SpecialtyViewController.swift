@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SpecialtyViewController: UITableViewController {
+class SpecialtyViewController: UITableViewController, UISplitViewControllerDelegate {
 
     //Constants
     static let specialitysURL = "api/v2/keywords/specialty"
@@ -19,11 +19,13 @@ class SpecialtyViewController: UITableViewController {
     var activityIndicator: UIActivityIndicatorView?
 
     //Instance variables
-    var specialityArray = [SpecialtyInfo]()
+    private var specialityArray = [SpecialtyInfo]()
+    private var collapseDetailViewController = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.getspecialitiessFromUrl()
+        splitViewController?.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -69,7 +71,7 @@ class SpecialtyViewController: UITableViewController {
                         weakSelf?.animateActivityIndicator(start: false)
                     }
                 }else{
-                    print("There are 0 entries at parsedData[\"summaries\"]")
+                    print("There are 0 entries at itemsArray")
                     weakSelf?.animateActivityIndicator(start: false)
                 }
             } catch let error as NSError {
@@ -77,6 +79,13 @@ class SpecialtyViewController: UITableViewController {
             }
         })
     }
+    
+    // MARK: - UISplitViewControllerDelegate
+    
+    func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool{
+        return collapseDetailViewController
+    }
+    
     
     //MARK: UITableViewControllerDelegate methods
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -87,6 +96,11 @@ class SpecialtyViewController: UITableViewController {
         return specialityArray.count
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        collapseDetailViewController = false
+    }
+    
+
     //MARK: UITableViewControllerDataSource methods
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let specialtyCell = tableView.dequeueReusableCell(withIdentifier: specialityCellId)
@@ -158,12 +172,15 @@ class SpecialtyViewController: UITableViewController {
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showSpeciality" {
-            if let destination = segue.destination as? SpecialityInfoTableViewController {
-                let path = tableView.indexPathForSelectedRow
-                let cell = tableView.cellForRow(at: path!)
-                destination.specialityId = cell?.tag
-            }
+        var destinationVC = segue.destination
+        if let navigationVC = destinationVC as? UINavigationController{
+            destinationVC = navigationVC.visibleViewController ?? destinationVC
+        }
+        if let specialityInfoTVC = destinationVC as? SpecialityInfoTableViewController {
+            let path = tableView.indexPathForSelectedRow
+            let cell = tableView.cellForRow(at: path!)
+            specialityInfoTVC.specialityId = cell?.tag
+            specialityInfoTVC.navigationItem.title = cell?.textLabel?.text
         }
     }
 

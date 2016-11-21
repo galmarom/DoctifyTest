@@ -28,7 +28,7 @@ class DoctifyTestUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func testExample() {        
         XCUIApplication().tables.staticTexts["General Practice"].tap()
         let cells = XCUIApplication().tables.cells
         XCTAssertEqual(cells.count, 4, "found instead: \(cells.debugDescription)")

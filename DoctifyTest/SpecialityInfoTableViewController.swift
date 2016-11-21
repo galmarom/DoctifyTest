@@ -78,7 +78,7 @@ class SpecialityInfoTableViewController: UITableViewController {
                     }
                     self.tableView!.reloadData()
                 }else{
-                    print("There are 0 entries at parsedData[\"summaries\"]")
+                    print("There are 0 entries at itemsArray")
                 }
             } catch let error as NSError {
                 print("An error has occured : " + error.localizedDescription)
