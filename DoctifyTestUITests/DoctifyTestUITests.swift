@@ -29,8 +29,17 @@ class DoctifyTestUITests: XCTestCase {
     }
     
     func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        XCUIApplication().tables.staticTexts["General Practice"].tap()
+        let cells = XCUIApplication().tables.cells
+        XCTAssertEqual(cells.count, 4, "found instead: \(cells.debugDescription)")
+        
+        var cellLabel: String = cells.element(boundBy: 0)
+            .staticTexts.element(boundBy: 0).label
+        XCTAssertEqual(cellLabel,"Name:", "found instead: \(cellLabel)")
+        
+        cellLabel = cells.element(boundBy: 1)
+            .staticTexts.element(boundBy: 0).label
+        XCTAssertEqual(cellLabel,"Description:", "found instead: \(cellLabel)")
     }
     
 }
