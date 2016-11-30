@@ -112,28 +112,23 @@ class SpecialtyViewController: UITableViewController, UISplitViewControllerDeleg
             let imagePath = "\(self.imagesDirectoryName)/\(imageName)"
             //If a file of the photo exists - use it. otherwise, retrive it from the URL and save it
             weak var weakspecialtyCell = specialtyCell
+            weak var weakSelf = self
             if FileHelper.fileExists(atPath: imagePath) {
                 FileHelper.loadImage(path: imagePath, withCompletion: { (imageFromFile) -> () in
                     if imageFromFile != nil {
                         DispatchQueue.main.async {
-                            weakspecialtyCell?.imageView?.image = imageFromFile
-                            weakspecialtyCell?.imageView?.layer.cornerRadius = 10
-                            weakspecialtyCell?.imageView?.layer.masksToBounds = true
+                            weakSelf?.setImage(imageFromFile!, inCell: weakspecialtyCell)
                         }
                     }else{
                         print("image is nil at \(imagePath)")
                     }
                 })
             }else if let iconURL = specialityInfo.iconURL {
-                weak var weakSelf = self
-                
                 NetworkHelper.downloadImage(fromURL: NetworkHelper.sharedInstance.baseURL + "/" + iconURL, withCompletionHandler: { image,error in
                     if image != nil {
                         //Saving the photo to the given path: directory/fileName
                         DispatchQueue.main.async {
-                            weakspecialtyCell?.imageView?.image = image
-                            weakspecialtyCell?.imageView?.layer.cornerRadius = 10
-                            weakspecialtyCell?.imageView?.layer.masksToBounds = true
+                            weakSelf?.setImage(image!, inCell: weakspecialtyCell)
                         }
                         FileHelper.save(image: image!, imageName:imageName, directory: weakSelf?.imagesDirectoryName, withCompletion: { url,error in
                             if url == nil {
@@ -145,6 +140,12 @@ class SpecialtyViewController: UITableViewController, UISplitViewControllerDeleg
             }
         }
         return specialtyCell!
+    }
+    
+    private func setImage(_ image: UIImage, inCell cell : UITableViewCell?){
+        cell?.imageView?.image = image
+        cell?.imageView?.layer.cornerRadius = 10
+        cell?.imageView?.layer.masksToBounds = true //bug in iOS9 - will log an error
     }
     
     //MARK: UI methods
