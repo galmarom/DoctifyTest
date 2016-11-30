@@ -76,7 +76,9 @@ class SpecialityInfoTableViewController: UITableViewController {
                     if let information = specialityDictionary["attributes"]?["information"] as? String {
                         self.specialityInfoArray.append(("Information:",information))
                     }
-                    self.tableView!.reloadData()
+                    DispatchQueue.main.async {
+                        self.tableView!.reloadData()
+                    }
                 }else{
                     print("There are 0 entries at itemsArray")
                 }
@@ -110,6 +112,8 @@ class SpecialityInfoTableViewController: UITableViewController {
         cell.descriptionLabel?.text = specialityInfo.value
         return cell
     }
+    
+
 
 
 }

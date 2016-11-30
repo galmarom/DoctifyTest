@@ -26,6 +26,11 @@ class SpecialtyViewController: UITableViewController, UISplitViewControllerDeleg
         super.viewDidLoad()
         self.getspecialitiessFromUrl()
         splitViewController?.delegate = self
+        self.setSplitViewPrefferedDisplayMode()
+    }
+    
+    override func willRotate(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
+        self.setSplitViewPrefferedDisplayMode()
     }
 
     override func didReceiveMemoryWarning() {
@@ -85,7 +90,6 @@ class SpecialtyViewController: UITableViewController, UISplitViewControllerDeleg
     func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool{
         return collapseDetailViewController
     }
-    
     
     //MARK: UITableViewControllerDelegate methods
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -150,6 +154,15 @@ class SpecialtyViewController: UITableViewController, UISplitViewControllerDeleg
     
     //MARK: UI methods
     //Start or Stops activity loader on the UI(main) thread
+    
+    private func setSplitViewPrefferedDisplayMode(){
+        if  UIScreen.main.bounds.width < UIScreen.main.bounds.height{
+            self.splitViewController?.preferredDisplayMode = .allVisible
+        }else{
+            self.splitViewController?.preferredDisplayMode = .automatic
+        }
+    }
+    
     private func animateActivityIndicator(start:Bool){
         if self.activityIndicator == nil{
             self.activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
@@ -184,6 +197,8 @@ class SpecialtyViewController: UITableViewController, UISplitViewControllerDeleg
             specialityInfoTVC.navigationItem.title = cell?.textLabel?.text
         }
     }
+    
+
 
 
 }
